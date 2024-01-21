@@ -1,0 +1,6 @@
+{{- with .Site.Params.Plausible -}}
+	{{- $source := .Src | default "https://stats.strooware.nl/js/script.js" -}}
+	{{- with .Domain -}}
+		<script src="{{- $source -}}" data-domain="{{- . -}}" defer></script>
+	{{- end -}}
+{{- end -}}
